@@ -1,0 +1,23 @@
+{
+	"name": "Escape Limassol",
+	"email": "info@escapecy.com",
+	"phoneForTel": "+357 96 487447",
+	"phoneFormatted": "(357) 96 487447",
+	"address": {
+		"lineOne": "Ellados Street, 7 ",
+		"lineTwo": "",
+		"city": "Limassol, Cyprus",
+		"state": "",
+		"zip": "3036",
+		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+	},
+	"address2": {
+		"lineOne": "June 16th Street 1943,",
+		"lineTwo": "1st floor,",
+		"city": "Limassol, Cyprus",
+		"state": "",
+		"zip": "3022",
+		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+	},
+	"domain": "www.codestitch.app"
+}

@@ -1,0 +1,127 @@
+---
+title: 'La Casa De Papel'
+description: 'Description for <meta> and OG tags'
+preloadImg: 'assets\images\landing-bg.jpg'
+permalink: 'lacasa/'
+eleventyNavigation:
+    key: La Casa De Papel
+    parent: Booking
+    order: 1000
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Any page-specific tags that belong in the <head>, such as a page-specific stylesheet -->
+    <link rel="stylesheet" href="/css/lacasa.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">La Casa De Papel</h1>
+        <picture>
+          <source media="(max-width: 600px)" srcset="{{ '/assets/images/la-casa-landing-m.webp' | url }}">
+          <source media="(min-width: 601px)" srcset="{{ '/assets/images/la-casa-landing.webp' | url }}">
+          <img aria-hidden="true" decoding="async" src="{{ '/assets/images/la-casa-landing.webp' | url }}" alt="landing-bg" loading="eager" width="2500" height="1667">
+        </picture>
+      </section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1080">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{{ '/assets/images/lacasa-m.webp' | url }}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{{ '/assets/images/lacasa.webp' | url }}">
+                <img loading="lazy" decoding="async" src="{{ '/assets/images/lacasa.webp' | url }}" alt="lacasa" width="217" height="440">
+              </picture>
+                           
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{{ '/assets/images/lacasa2-m.webp' | url }}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{{ '/assets/images/lacasa2.webp' | url }}">
+                <img loading="lazy" decoding="async" src="{{ '/assets/images/lacasa2.webp' | url }}" alt="lacasa" width="305" height="600">
+              </picture>              
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{{ '/assets/images/lacasa3-m.webp' | url }}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{{ '/assets/images/lacasa3.webp' | url }}">
+                <img loading="lazy" decoding="async" src="{{ '/assets/images/lacasa3.webp' | url }}" alt="lacasa" width="216" height="440">
+              </picture>              
+            <!--Stripe background-->
+            <img class="cs-stripes" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/stripes.svg" alt="stripes" width="509" height="535" aria-hidden="true">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">THE EXPERIENCE</span>
+            <h2 class="cs-title">EXPERIENCE A HEIST THROUGH THE EYES OF A MASTERMIND </h2>
+            <p class="cs-text">
+                Step into "La Casa De Papel" escape room, where you become daring robbers inside the Royal Mint of Spain. Don Salvador Dali masks hide your identity as you work to execute the Professor's grand plan, printing 2.4 billion euros. Outwit the authorities, solve puzzles, and secure your escape before time runs out! Can you leave with the fortune of a lifetime? The clock is ticking!
+            </p>
+            <ul class="cs-list">
+                <li class="cs-li">Daring heist inside the Royal Mint of Spain.</li>
+                <li class="cs-li">Race against time - 60 minutes to escape.</li>
+                <li class="cs-li">Will you make a legendary escape or get caught?</li>
+            </ul>
+            <a class="cs-link" href="tel:+35796487447">
+                <picture class="cs-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/white-phone.svg" alt="icon" width="24" height="24">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-header">Call Anytime</span>
+                    <span class="cs-link-content">(+357) 96 487447</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Turitop                     -->
+<!-- ============================================ -->
+<section id="sp-mainbottom-wrapper" class=" ">
+    
+        <div class="row-fluid" id="mainbottom">
+            <div id="sp-mainbottom1" class="span12" >
+                <div class="module ">
+                    <div class="mod-wrapper clearfix" >
+                        <div class="mod-content clearfix">
+                            <div class="mod-inner clearfix">
+                                <div class="custom" >
+                                    <div style="text-align:center" class="loading-turitop" data-service="P8"
+                                        data-lang="en" data-embed="box" data-category=" " data-version=" "
+                                        data-datepickeravailability=" " data-servicename=" " >
+                                        <iframe
+                                            sandbox="allow-top-navigation allow-forms allow-modals allow-scripts allow-same-origin allow-popups"
+                                            src="https://app.turitop.com/booking/box/E349/P8/en?ts=1690138891318&amp;returnUrl=aHR0cHM6Ly9lc2NhcGVjeS5jb20vZW4vYm9va2luZy9sYS1jYXNhLWRlLXBhcGVs"
+                                            name="turitop-iframe-0" height="100" width class="iframe-resizable-turitop"
+                                            id="iFrameResizer0" scrolling="no"
+                                            style="height:750px; "></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap"></div>
+            </div>
+        </div>
+</section>
+       
+      
+    <!-- Page HTML goes here, without a <main> wrapper -->
+{% endblock %}
+

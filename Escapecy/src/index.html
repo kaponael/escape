@@ -1,0 +1,296 @@
+---
+title: 'Limassol Escape'
+description: 'Meta description for the page'
+preloadImg: 'assets\images\landing-bg.jpg'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/local.css" />
+    <link rel="stylesheet" href="/css/critical.css" />
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-82">
+    <div class="cs-container">
+        <h1 class="cs-title">THE TOP ESCAPE ROOM'S PROVIDER IN CYPRUS</h1>
+        <p class="cs-text">
+            Escape the Ordinary! Immerse yourself in thrilling puzzles, race against the clock, and experience heart-pounding excitement. Can you escape? </p>
+        <a href="" class="cs-button-solid">Book An Escape Room</a>
+
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="assets\images\landing-bg-m.jpg">
+        <source media="(min-width: 601px)" srcset="assets\images\landing-bg.jpg">
+        <img loading="lazy" decoding="async" src="assets\images\landing-bg.jpg" alt="room" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Video                      -->
+<!-- ============================================ -->
+
+<section id="video-548">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Video</span>
+            <h2 class="cs-title">Unlock the Adventure: Dive into the Ultimate Escape Room Experience!</h2>
+            <p class="cs-text">
+                Solve puzzles, uncover secrets, and race against the clock in our thrilling Escape Room Adventure! Will you escape or be trapped forever? 
+            </p>
+        </div>
+        <a href="https://www.youtube.com/watch?v=UiJivQT-YIw" class="cs-big-link">
+            <!--Background Image-->
+            <picture class="cs-background">
+                <source media="(min-width: 1024px)" srcset="assets\images\Youtube.png">
+                <source media="(min-width: 601px)" srcset="assets\images\youtube-m.png">
+                <source media="(max-width: 600px)" srcset="assets\images\youtube-m.png">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="assets\images\Youtube.png" alt="meeting" width="1280" height="580">
+            </picture>
+            <!--Play Icon-->
+            <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://uxwing.com/wp-content/themes/uxwing/download/video-photography-multimedia/red-play-button-icon.svg" alt="play icon" width="110" height="110">
+        </a>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-885">
+    <div class="cs-container">
+      <div class="cs-content">
+        <span class="cs-topper">Escape Rooms</span>
+        <h2 class="cs-title">LIMASSOL ESCAPE</h2>
+        <p class="cs-text">
+          Our escape rooms offer a diverse selection of themes and challenges, meticulously crafted to cater to a wide range of interests and skill levels. Whether you're a fan of thrilling mysteries, adventurous quests, or mind-bending puzzles, we have something for everyone.
+        </p>
+      </div>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <a href="/lacasa" class="cs-link">
+            <h3 class="cs-h3">LA CASA DE PAPEL</h3>
+            <p class="cs-item-p">
+                Embark on a Daring Heist in the Royal Mint of Spain, Wearing Salvador Dali Masks! Outsmart the Authorities and Execute the Professor's Elaborate Plan for Escape!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/lacasa-m.webp' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/lacasa.webp' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/lacasa.webp' | url }}" alt="la casa" width="1280" height="568">
+            </picture>            
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">PRISON BREAK</h3>
+            <p class="cs-item-p">
+                Falsely Accused and Sentenced to Death, Enter Fox River Prison and Embrace Michael Scofield's Abandoned Escape Plan. Unravel Clues and Keys Within 60 Minutes to Evade Execution!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/prisonbreak-m.jpg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/prisonbreak.jpg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/prisonbreak.jpg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">ACROPOLIS MYSTERY</h3>
+            <p class="cs-item-p">
+                A Race Against Time to Retrieve Priceless Artifacts from a Hidden Warehouse in Acropolis! Outmaneuver the Pursuing Police and Black Market Thieves to Escape Unscathed!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/acropolis-m.jpeg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/acropolis.jpeg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/acropolis.jpeg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">LOST</h3>
+            <p class="cs-item-p">
+                Lost in a Dark, Enigmatic Forest, Your Team Stumbles Upon an Abandoned Cabin. Uncover its Secrets and Face the Ultimate Choice: Escape to Safety or Be Trapped Forever!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/lost-m.jpg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/lost.jpg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/lost.jpg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">TAKEN</h3>
+            <p class="cs-item-p">
+                Desperate Parents Seek Your Help in Finding Two Kidnapped Children. Follow the Sole Lead and Confront the Suspect Within 60 Minutes to Secure Their Escape!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/taken-m.jpg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/taken.jpg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/taken.jpg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">ILLUMINATI</h3>
+            <p class="cs-item-p">
+                Immerse Yourself in a Covert Investigation at the Vatican. Unravel the Mystery Behind the Pope's Mysterious Death and Dodge the Swift Swiss Guard Capture to Emerge Triumphant!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/illuminati-m.jpg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/illuminati.jpg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/illuminati.jpg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+        <li class="cs-item">
+          <a href="" class="cs-link">
+            <h3 class="cs-h3">JOHN MONROE OFFICE</h3>
+            <p class="cs-item-p">
+                Step into 1970s England as Detective John Monroe's Protégé. Sift Through Clues, Identify the Murderer Among Four Suspects, and Solve the Crime Before Time Runs Out!
+            </p>
+            <!--Background Image-->
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="{{ '/assets/images/john-m.jpg' | url }}">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="{{ '/assets/images/john.jpg' | url }}">
+              <img loading="lazy" decoding="async" src="{{ '/assets/images/john.jpg' | url }}" alt="person" width="1280" height="568">
+            </picture>
+          </a>
+        </li>
+      </ul>
+      <a href="" class="cs-button-solid">Book Your Room Now</a>
+    </div>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+  </section>
+
+   
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-489">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">If Your Question Is Not Here <span class="cs-color">Contact Us</span></h2>
+            <p class="cs-text">
+                At our escape room, we pride ourselves on delivering an exceptional customer support experience that enhances the thrill of our immersive challenges. 
+            </p>
+            <a href="" class="cs-button-solid">Contact Us</a>
+        </div>
+        <ul class="cs-faq-group">
+            <!-- Active class added as default -->
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        What is the maximum allowed tardiness for a booking?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                     Please arrive no later than 30 minutes after your scheduled start time.                </p>
+            </li>
+            <li class="cs-faq-item active">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        What is the minimum age requirement for the escape room?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    The escape room is suitable for ages 8 and up.              </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        Can I host a birthday party at the escape room?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    Absolutely! Contact us to book a special birthday party package.                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        How far in advance should I make a booking?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    Bookings can be made up to 2 hours before the desired game time.                </p>
+            </li>
+            <li class="cs-faq-item">
+                <button class="cs-button">
+                    <span class="cs-button-text">
+                        What is the minimum and maximum number of players per room?
+                    </span>
+                </button>
+                <p class="cs-item-p">
+                    The minimum number of players required is 2, and the maximum is 7. However, please note that room sizes can vary, and we strive to provide a comfortable experience for all participants.                </p>
+            </li>
+        </ul>
+    </div>
+    <script>const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)} </script>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+{% endblock %}

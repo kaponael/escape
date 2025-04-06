@@ -1,0 +1,585 @@
+/* PAGE-SPECIFIC STYLES FOR THE LA CASA PAGE */
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-1080 {
+        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+        font-family: 'Roboto', 'Arial', sans-serif;
+        padding: var(--sectionPadding);
+        background-color: #1a1a1a;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            /* changes to 433px at desktop */
+            max-width: calc(542 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+    
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: inherit;
+            letter-spacing: .1em;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: calc(4 / 16 * 1rem);
+            display: block;
+        }
+    
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            max-width: calc(700 / 16 * 1rem);
+            margin: 0 0 calc(16 / 16 * 1rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+    
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            max-width: calc(650 / 16 * 1rem);
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-title {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            margin-bottom: calc(16 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            opacity: .8;
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-list {
+            max-width: calc(630 / 16 * 1rem);
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            padding: 0;
+            /* clips the bullets to create the half circle */
+            overflow: hidden;
+        }
+
+        .cs-li {
+            list-style: none;
+            margin: 0 0 calc(8 / 16 * 1rem) 0;
+            color: var(--bodyTextColorWhite);
+            opacity: .8;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: calc(12 / 16 * 1rem);
+            position: relative;
+    
+            &:before {
+                /* bullet */
+                content: '';
+                width: calc(16 / 16 * 1rem);
+                height: calc(16 / 16 * 1rem);
+                margin-top: calc(3 / 16 * 1rem);
+                /* make it overflow the parent by half it's width to make an eclipse */
+                margin-left: calc(-8 / 16 * 1rem);
+                background: white;
+                border-radius: 50%;
+                display: block;
+                /* prevents flexbox from squishing it */
+                flex: none;
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: calc(12 / 16 * 1rem);
+            position: relative;
+    
+            &:hover {
+                .cs-wrapper {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-wrapper {
+            width: calc(56 / 16 * 1rem);
+            height: calc(56 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            transition: transform .3s;
+        }
+    
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+            transition: transform .3s;
+        }
+    
+        .cs-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(4 / 16 * 1rem);
+        }
+    
+        .cs-header {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            opacity: .8;
+            display: block;
+        }
+    
+        .cs-link-content {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 4vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            display: block;
+        }
+
+        .cs-image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+            font-size:min(1.959vw, .745em);
+            width: calc(738 / 16 * 1em);
+            height: calc(662 / 16 * 1em);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            width: calc(219 / 16 * 1em);
+            height: calc(440 / 16 * 1em);
+            top: calc(102 / 16 * 1em);
+            right: 0;
+            z-index: -1;
+        }
+
+        .cs-picture2 {
+            width: calc(307 / 16 * 1em);
+            height: calc(600 / 16 * 1em);
+            bottom: 0;
+            right: calc(217 / 16 * 1em);
+            z-index: 10;
+        }
+
+        .cs-picture3 {
+            width: calc(218 / 16 * 1em);
+            height: calc(440 / 16 * 1em);
+            top: calc(182 / 16 * 1em);
+            left: 0;
+            z-index: -1;
+        }
+
+        .cs-stripes {
+            width: calc(578 / 16 * 1em);
+            height: auto;
+            display: block;
+            position: absolute;
+            top: calc(0 / 16 * 1em);
+            right: calc(72 / 16 * 1em);
+            z-index: -2;
+        }
+
+        
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-1080 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1em);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-content {
+            max-width: calc(433 / 16 * 1em);
+        }
+
+        .cs-image-group {
+            font-size:min(1.2vw, 1em);
+            flex: none;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbsr-1080 {
+            background-color: rgba(0, 0, 0, .6);
+        }
+    }
+}
+                                
+.load-turitop {
+    background: url(https://app.turitop.com/img/js-loading-widget.gif) no-repeat top left;
+    min-height: 30px;
+    min-width: 30px;
+    font-size: 1px
+    
+    
+}
+
+.loading-turitop iframe {
+    width: 100%;
+    max-width: 1150px;
+    min-width: 300px;
+    border: none;
+    min-height: 300px
+}
+
+.loading-turitop iframe.daily-all {
+    max-width: 100%
+}
+
+.lightbox-wrapper-turitop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 90000004
+}
+
+.lightbox-expanded-turitop {
+    position: fixed;
+    width: 90%;
+    height: 96%;
+    max-width: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 90000002
+}
+
+.lightbox-iframe-container-turitop {
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 95%;
+    border: none;
+    background-color: #fff;
+    border-radius: .9em;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(0,0,0,.75);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(0,0,0,.75);
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.75)
+}
+
+.x-lightbox-turitop {
+    border-radius: .9em .9em 0 0;
+    background: #ccc;
+    width: 25px;
+    margin: 0 12px 0 auto;
+    padding: 2px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: helvetica;
+    height: 4%;
+    cursor: pointer;
+    color: #000;
+    line-height: 15px
+}
+
+.lightbox-iframe-turitop {
+    width: 96%;
+    height: 96%;
+    margin: 2%;
+    border: none;
+    position: relative
+}
+
+.lightbox-caption-turitop {
+    position: fixed;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90000003
+}
+
+.lightbox-overlay-turitop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    opacity: .85;
+    z-index: 90000001
+}
+
+a.lightbox-button-turitop {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 15px;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: arial;
+    border-radius: 3px;
+    cursor: pointer;
+    cursor: hand;
+    text-decoration: none
+}
+
+div.loading-turitop.inline {
+    display: inline
+}
+
+div.loading-turitop.inline a.lightbox-button-turitop {
+    margin: 1px 1px 4px 1px
+}
+
+html.turitop-ios .lightbox-iframe-container-turitop {
+    overflow: auto
+}
+
+html.turitop-ios body.freeze-bg-lightbox-turitop {
+    overflow-y: hidden;
+    position: fixed
+}
+
+@media screen and (max-width: 550px) {
+    .lightbox-expanded-turitop {
+        top:2%;
+        left: 1%;
+        transform: translate(0,0);
+        width: 98%
+    }
+
+    .lightbox-iframe-turitop {
+        width: 98%;
+        height: 98%;
+        margin: 1%;
+        border: none
+    }
+
+    .lightbox-iframe-container-turitop {
+        border-radius: .4em
+    }
+}
+
+a.lightbox-button-turitop-green {
+    border: 1px solid #258f2c;
+    background: #00b22d;
+    background: -webkit-gradient(linear,left top,left bottom,from(#00b22d),to(#258f2c));
+    background: -moz-linear-gradient(top,#00b22d,#258f2c);
+    background: linear-gradient(to bottom,#00b22d,#258f2c);
+    color: #fff
+}
+
+.lightbox-button-turitop-green:focus,.lightbox-button-turitop-green:hover {
+    background: #00d636;
+    background: -webkit-gradient(linear,left top,left bottom,from(#00d636),to(#2cac35));
+    background: -moz-linear-gradient(top,#00d636,#2cac35);
+    background: linear-gradient(to bottom,#00d636,#2cac35);
+    color: #fff
+}
+
+a.lightbox-button-turitop-red {
+    border: 1px solid #992727;
+    background: #ff4a4a;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ff4a4a),to(#992727));
+    background: -moz-linear-gradient(top,#ff4a4a,#992727);
+    background: linear-gradient(to bottom,#ff4a4a,#992727);
+    color: #fff
+}
+
+.lightbox-button-turitop-red:focus,a.lightbox-button-turitop-red:hover {
+    background: #ff5959;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ff5959),to(#b62f2f));
+    background: -moz-linear-gradient(top,#ff5959,#b62f2f);
+    background: linear-gradient(to bottom,#ff5959,#b62f2f);
+    color: #fff
+}
+
+.lightbox-button-turitop-blue {
+    border: 1px solid #0059a7;
+    background: #03a1f0;
+    background: -webkit-gradient(linear,left top,left bottom,from(#03a1f0),to(#0059a7));
+    background: -moz-linear-gradient(top,#03a1f0,#0059a7);
+    background: linear-gradient(to bottom,#03a1f0,#0059a7);
+    color: #fff
+}
+
+.lightbox-button-turitop-blue:focus,.lightbox-button-turitop-blue:hover {
+    background: #03a1f0;
+    background: -webkit-gradient(linear,left top,left bottom,from(#04c1ff),to(#006bc8));
+    background: -moz-linear-gradient(top,#04c1ff,#006bc8);
+    background: linear-gradient(to bottom,#04c1ff,#006bc8);
+    color: #fff
+}
+
+.lightbox-button-turitop-orange {
+    border: 1px solid #cc5f00;
+    background: #ff9b00;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ff9b00),to(#cc5f00));
+    background: -moz-linear-gradient(top,#ff9b00,#cc5f00);
+    background: linear-gradient(to bottom,#ff9b00,#cc5f00);
+    color: #fff
+}
+
+.lightbox-button-turitop-orange:focus,.lightbox-button-turitop-orange:hover {
+    background: #ffba00;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffba00),to(#f57200));
+    background: -moz-linear-gradient(top,#ffba00,#f57200);
+    background: linear-gradient(to bottom,#ffba00,#f57200);
+    color: #fff
+}
+
+.lightbox-button-turitop-yellow {
+    border: 1px solid #d1c41b;
+    background: #ffef06;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffef06),to(#fad903));
+    background: -moz-linear-gradient(top,#ffef06,#fad903);
+    background: linear-gradient(to bottom,#ffef06,#fad903);
+    color: #443800
+}
+
+.lightbox-button-turitop-yellow:focus,.lightbox-button-turitop-yellow:hover {
+    border: 1px solid #e9e823;
+    background: #feff40;
+    background: -webkit-gradient(linear,left top,left bottom,from(#feff40),to(#f7e720));
+    background: -moz-linear-gradient(top,#feff40,#f7e720);
+    background: linear-gradient(to bottom,#feff40,#f7e720);
+    color: #443800
+}
+
+.lightbox-button-turitop-white {
+    border: 1px solid #f6f6f6;
+    background: #fff;
+    color: #333
+}
+
+.lightbox-button-turitop-white:focus,.lightbox-button-turitop-white:hover {
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    color: #000
+}
+
+.lightbox-button-turitop-black {
+    border: 1px solid #060606;
+    background: #000;
+    color: #fff
+}
+
+.lightbox-button-turitop-black:focus,.lightbox-button-turitop-black:hover {
+    border: 1px solid #060606;
+    background: #333;
+    color: #fff
+}
+
+a.lightbox-button-turitop.turitop-cart-button {
+    padding: 5px
+}
+
+#turitop-cart-button:hover {
+    text-decoration: none
+}
+
+#turitop-cart-button {
+    display: inline-flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#turitop-cart-button img {
+    max-width: 35px
+}
+
+#turitop-cart-button .badge {
+    color: #fff;
+    font-family: sans;
+    min-width: 12px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    position: relative;
+    margin-left: .6em
+}
+
+#turitop-cart-button iframe {
+    display: none!important
+}
+
+#turitop-cart-button span img {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px
+}
+
+.auditorium-iframe {
+    max-width: 1200px!important;
+    min-height: 800px!important
+}
+
